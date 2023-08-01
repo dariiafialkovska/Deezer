@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="LikedTrackButtonStyle">
+        <item name="trackLikedBackground">@drawable/ic_favorite</item>
+        <item name="trackUnlikedBackground">@drawable/ic_favorite_full</item>
+    </style>
+
+    <style name="UnlikedTrackButtonStyle">
+        <item name="trackLikedBackground">@drawable/ic_favorite</item>
+        <item name="trackUnlikedBackground">@drawable/ic_favorite</item>
+    </style>
+</resources>

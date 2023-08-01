@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Deezer</string>
+    <string name="genres">Genres\n</string>
+    <string name="genre_name">Genre Name</string>
+    <string name="artists">Artists</string>
+    <string name="artist_name">Artist Name\n</string>
+    <string name="category_name">Category Name</string>
+    <string name="album_name">Album Name</string>
+    <string name="album_date">Album Date</string>
+    <string name="song_name">Song Name</string>
+    <string name="song_duration">Song Duration</string>
+    <string name="track_name">Track Name</string>
+    <string name="track_duration">Track Duration</string>
+    <string name="heart_button">Heart Button</string>
+    <string name="liked">Liked</string>
+    <string name="music_genre">Music Genre</string>
+    <string name="liked_tracks">Liked</string>
+</resources>

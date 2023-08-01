@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/deezer_app_nav_graph"
+    app:startDestination="@id/fragment_genre_list_screen">
+    <fragment
+        android:id="@+id/fragment_genre_list_screen"
+        android:name="com.example.deezer.presentation.genreList.GenreListScreenFragment"
+        android:label="fragment_genre_list"
+        tools:layout="@layout/fragment_genre_list_screen" >
+        <action
+            android:id="@+id/action_fragment_genre_list_screen_to_fragment_artist_list_screen"
+            app:destination="@id/fragment_artist_list_screen" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/fragment_artist_list_screen"
+        android:name="com.example.deezer.presentation.artistlist.ArtistListScreenFragment"
+        android:label="fragment_artist_list"
+        tools:layout="@layout/fragment_artist_list_screen">
+
+        <action
+            android:id="@+id/action_fragment_artist_list_screen_to_fragment_genre_list_screen"
+            app:destination="@id/fragment_genre_list_screen" />
+        <argument
+            android:name="genreId"
+            app:argType="integer"/>
+        <argument
+            android:name="genreTitle"
+            app:argType="string"/>
+        <action
+            android:id="@+id/action_fragment_artist_list_screen_to_fragment_album_list_screen"
+            app:destination="@id/fragment_album_list_screen" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/fragment_album_list_screen"
+        android:name="com.example.deezer.presentation.albumlist.AlbumListScreenFragment"
+        android:label="fragment_album_list"
+        tools:layout="@layout/fragment_album_list_screen" >
+        <action
+            android:id="@+id/action_fragment_album_list_screen_to_fragment_artist_list_screen"
+            app:destination="@id/fragment_artist_list_screen" />
+
+        <argument
+            android:name="artistId"
+            app:argType="integer"/>
+        <argument
+            android:name="artistName"
+            app:argType="string" />
+        <argument
+            android:name="artistImage"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_fragment_album_list_screen_to_fragment_track_list_screen"
+            app:destination="@id/fragment_track_list_screen" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/fragment_track_list_screen"
+        android:name="com.example.deezer.presentation.tracklist.TrackListScreenFragment"
+        android:label="fragment_track_list"
+        tools:layout="@layout/fragment_track_list_screen"
+        >
+
+
+        <action
+            android:id="@+id/action_fragment_track_list_screen_to_fragment_album_list_screen"
+            app:destination="@id/fragment_album_list_screen" />
+
+        <argument
+            android:name="albumId"
+            app:argType="long"
+            />
+        <argument
+            android:name="albumName"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/bottom_nav"
+        android:name="com.google.android.material.bottomnavigation.BottomNavigationView"
+        android:label="BottomNav"
+        app:menu="@menu/nav_menu"
+        />
+
+    <fragment
+        android:id="@+id/fragment_liked_track_list_screen"
+        android:name="com.example.deezer.presentation.likedlist.LikedTrackListScreenFragment"
+        android:label="fragment_liked_track_list"
+        tools:layout="@layout/fragment_liked_track_list_screen">
+
+    </fragment>
+
+</navigation>
